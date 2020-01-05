@@ -1,6 +1,7 @@
 <template>
-  <ul>
-    <VideoListItem v-for="video in videos" :video="video"></VideoListItem>
+  <ul class="list-group">
+    <VideoListItem v-for="video in videos" :video="video" :key="video.etag"></VideoListItem>
+    <!--etag is provided by API-->
   </ul>
 </template>
 

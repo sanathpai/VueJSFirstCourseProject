@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <input @input="onInput" />
     <!-- @input is same as v-on:input-->
   </div>
@@ -17,5 +17,12 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
+input {
+  width: 75%;
+}
+div {
+  text-align: center;
+  margin: 20px;
+}
 </style>
