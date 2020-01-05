@@ -1,7 +1,7 @@
 <template>
-  <li class="list-group-item">
-    <img :src="thumbnailUrl" />
-    {{video.snippet.title}}
+  <li class="list-group-item media">
+    <img class="mr-3" :src="thumbnailUrl" />
+    <div class="media-body">{{video.snippet.title}}</div>
   </li>
 </template>
 
@@ -19,5 +19,12 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
+li {
+  display: flex; /*to get image and heading in same line */
+  cursor: pointer;
+}
+li:hover {
+  background-color: #eee;
+}
 </style>
