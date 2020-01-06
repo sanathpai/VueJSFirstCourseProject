@@ -20,7 +20,7 @@ export default {
   },
   props: ["videos"], //array of strings which are exact property names of data which they should expect
   //same as what we gave in app.vue with :
-  methids: {
+  methods: {
     onVideoSelect: function(video) {
       this.$emit("videoSelect", video);
     }
