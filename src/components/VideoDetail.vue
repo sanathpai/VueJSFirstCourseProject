@@ -1,7 +1,7 @@
 <template>
   <div v-if="video">
-    <div>
-      <iframe :src="videoUrl" />
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" :src="videoUrl" />
     </div>
     <div class="details">
       <h4>{{video.snippet.title}}</h4>
@@ -16,7 +16,8 @@ export default {
   props: ["video"],
   computed: {
     videoUrl: function() {
-      const videoId = this.video.id.videoId;
+      const { videoId } = this.video.id; //when variables are same cover lhs with{} and remove the rhs word
+      return `https://www.youtube.com/embed/${videoId}`;
     }
   }
 };
