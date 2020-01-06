@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <input @input="onInput" />
     <!-- @input is same as v-on:input-->
   </div>

@@ -1,14 +1,16 @@
 <template>
-  <div>
+  <div class="cotainer">
     <SearchBar @termChange="onTermChange"></SearchBar>
-    <VideoDetail :video="selectedVideo" />
-    <!--no nee of this. in template also in instance when updatind data properties in the function, no need this.data.-->
-    <VideoList :videos="videos" @videoSelect="onVideoSelect"></VideoList>
-
-    <!--similar to @ but for data from parent to child-->
-    <!-- v-bind can have any name and the second videos is what we specify in the data property-->
+    <div class="row">
+      <VideoDetail :video="selectedVideo" />
+      <!--no nee of this. in template also in instance when updatind data properties in the function, no need this.data.-->
+      <VideoList :videos="videos" @videoSelect="onVideoSelect"></VideoList>
+    </div>
   </div>
+  <!--similar to @ but for data from parent to child-->
+  <!-- v-bind can have any name and the second videos is what we specify in the data property-->
 </template>
+
 
 <script>
 import VideoDetail from "./components/VideoDetail";
