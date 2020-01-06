@@ -1,5 +1,5 @@
 <template>
-  <li class="list-group-item media">
+  <li class="list-group-item media" @click="onVideoSelect">
     <img class="mr-3" :src="thumbnailUrl" />
     <div class="media-body">{{video.snippet.title}}</div>
   </li>
@@ -13,6 +13,11 @@ export default {
     thumbnailUrl: function() {
       return this.video.snippet.thumbnails.default.url;
       //we put this whenever we use prop
+    }
+  },
+  methods:{
+    onVideoSelect:function(){
+      this.$emmit('videoSelect',this.video)//video is the prop by parent
     }
   }
 };
