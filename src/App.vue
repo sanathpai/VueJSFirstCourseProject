@@ -27,6 +27,9 @@ export default {
     return { videos: [], selectedVideo: null }; //should know what the data must contain
   },
   methods: {
+    onVideoSelect: function(video) {
+      this.selectedVideo = video;
+    },
     onTermChange: function(searchTerm) {
       axios
         .get("https://www.googleapis.com/youtube/v3/search", {
@@ -40,9 +43,6 @@ export default {
         .then(response => {
           this.videos = response.data.items; // data is not related to our instance, its from Youtube API response (check out in ctrl+SHIFT+I)
         });
-    },
-    onVideoSelect: function(video) {
-      this.selectedVideo = video;
     }
   }
 };
