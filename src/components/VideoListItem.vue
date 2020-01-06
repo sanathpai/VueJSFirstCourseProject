@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     onVideoSelect: function() {
-      this.$emmit("videoSelect", this.video); //video is the prop by parent
+      this.$emit("videoSelect", this.video); //video is the prop by parent
     }
   }
 };

@@ -22,7 +22,7 @@ export default {
   //same as what we gave in app.vue with :
   methids: {
     onVideoSelect: function(video) {
-      this.$emmit("videoSelect", video);
+      this.$emit("videoSelect", video);
     }
   }
 };
